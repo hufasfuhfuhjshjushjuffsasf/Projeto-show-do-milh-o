@@ -1,0 +1,211 @@
+html{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    width: 100%;
+    background-image: url(../fotos/imagem%20de%20fundo%201.jpg);
+    background-position: center;
+    overflow: auto;
+    background-repeat: repeat;
+    font-family: arial, sans-serif;
+}
+
+
+/* Inicio da pagina principal*/
+#principal{
+    width: 50%;
+    height: 600px;
+    border: 15px solid yellow;
+    margin: 160px auto;
+    border-radius: 40px;
+    background-image: linear-gradient( to top ,rgba(0, 10, 255, 0.8) 20%,rgba(255, 0, 0, 0.8));
+}
+
+.logo{
+    width: 40%;
+    height: 35%;
+    margin: 50px auto 0;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    display: block;
+    overflow: auto;
+}
+
+.button{
+    display: block;
+    background-color: #2316f1;
+    border: 3px solid #e1d500;
+    color: white;
+    padding: 0.4em 0.8em;
+    border-radius: 80px;
+    font-size: 2em;
+    transition: all .7s;
+    cursor: pointer;
+    margin: 40px auto;
+}
+
+.button:hover{
+    background-color: rgba(225, 213, 0, 0.81);
+    border-color: transparent;
+}
+
+.button-a{
+    color: white;
+    text-decoration: none;
+}
+/*Final da pagina principal*/
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio da pagina Ajuda*/
+
+.p-ajuda{
+    height: 95%;
+    width: 70% ;
+    overflow: auto;
+    margin: 10px auto;
+/*    border: 5px solid black;*/
+    font-size: 1.4em;
+    text-align: center;
+    
+}
+
+.p-ajuda p{
+    word-wrap: break-word;
+    border: 8px solid #e1d500;
+    color: white;
+    border-radius: 5px;
+    margin: 40px auto;
+    background-color: rgba(0,0,0,0.5)
+}
+
+.p-ajuda button{
+    margin-top: 10px;
+}
+
+
+
+
+/*Final da pagina Ajuda*/
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio das perguntas*/
+.main-grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,[col-start] 1fr [col-end]);
+    grid-template-rows:  repeat(4,[row-start] 23% [row-end]);
+    grid-gap: 7px;
+    overflow: auto;
+    margin-top: 20px;
+    word-wrap: break-word;
+}
+
+.pergunta{
+    grid-column: col-start 1 / col-end 3;
+    grid-row: row-start 1 / row-end 2 ;
+    margin: 10px;
+    border: 10px solid white;
+    border-radius: 25px;
+    overflow:hidden;
+    background: rgba(0, 0, 0, 0.7);
+}
+.pergunta h1{
+    color: white;
+    margin: 10px;
+}
+
+.pergunta-aleatoria{
+    color: white;
+    font-size: 1.4em;
+    margin: 10px;
+}
+
+.dica{
+    color: #b10202;
+    font-size: 2em;
+}
+
+.pontuacao{
+    grid-column: col-start 4 / col-end 4;
+    grid-row: row-start 1/ row-end 2;
+    margin: 10px;
+    border: 10px solid white;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.pontuacao h2{
+    color: white;
+    margin: 10px;
+    font-size: 1.5em
+}
+
+.dinheiro{
+    color: gold;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+
+.respostas{
+    border: 3px solid white;
+    grid-column: col-start 1 / col-end 2;
+    grid-row: row-start 3 /row-end 4;
+    margin: 10px 10px 20px;
+    border: 10px solid white;
+    border-radius: 25px;
+    display: grid;
+    grid-row: repeat(4,);
+    word-wrap: break-word;
+}
+
+.button-resposta{
+    background-color: #ff0031;
+    border: 3px solid white;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.5em;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 6px;
+}
+.button-resposta:hover{
+    background-color: rgba(225, 213, 0, 0.81);
+    border-color: transparent;
+}
+
+.button-resposta a{
+    color: white;
+    text-decoration: none;
+}
+
+.ajuda{
+    border: 3px solid white;
+    grid-column: col-start 3 / col-end 4;
+    grid-row: row-start 3 /row-end 4;
+    margin: 10px 10px 20px;
+    border: 10px solid white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button-ajuda{
+    margin: 8%;
+    font-size: 1em;
+    overflow: hidden;
+}
+/*Final das perguntas*/
+

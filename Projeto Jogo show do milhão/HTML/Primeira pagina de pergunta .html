@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        
+        <link type="text/css" href="../CSS/estilo.css" rel="stylesheet">
+        <link type="text/css" href="../CSS/normalize.css" rel="stylesheet">
+        
+        <script src="../JavaScript/Fun%C3%A7%C3%B5es.js"></script>
+        
+       
+    </head>
+    <body>
+      
+       <audio id="certo" src="../Sons/Som%20de%20acerto.mp3"></audio>
+       <audio id="errado" src="../Sons/Som%20de%20errado.mp3"></audio>
+       <audio id="suspense" src="../Sons/%5BM%C3%BAsica%5D%20Show%20do%20Milh%C3%A3o%20%20Suspense.mp3" autoplay loop></audio>
+       <audio id="champion" src="../Sons/musica%20final%20vitorioso.mp3"></audio>
+       
+       <div id="principal" class="main">  
+         
+        <main class="main-grid">
+        
+         <div class="pergunta">
+          
+           <h1>Pergunta:</h1>
+           <p class="pergunta-aleatoria"></p>
+           <p class="pergunta-aleatoria dica">Clique em "Começar" para iniciar o jogo :)</p>
+            
+         </div>
+         
+         <div class="pontuacao">
+           
+            <h2>Se parar:</h2>
+            <p class="dinheiro">0</p>
+            <hr>
+            <h2>Se acertar:</h2>
+            <p class="dinheiro dinheiro-ganhar">8000</p>
+            <hr>
+            <h2>Se errar:</h2>
+            <p class="dinheiro dinheiro-perder">0</p>
+             
+         </div>
+         
+         <div class="respostas"> 
+           
+            <button  class="button-resposta  dbutton" onclick="trueorfalse(resposta, a)" disabled ></button>
+            <button  class="button-resposta  dbutton" onclick="trueorfalse(resposta, b)" disabled ></button>
+            <button  class="button-resposta  dbutton" onclick="trueorfalse(resposta, c)" disabled ></button>
+            <button  class="button-resposta  dbutton" onclick="trueorfalse(resposta, d)" disabled ></button>
+           
+         </div>
+         
+         <div class="ajuda">
+                          
+            <button class="button-resposta button-ajuda"><a href="Pagina%20principal%20.html">Voltar</a></button>
+            <button class="button-resposta button-ajuda continuar" onclick="resposta = começar()">Começar</button>
+            <button class="button-resposta button-ajuda convidado" onclick="convidado(resposta)">Convidados</button>
+            <button class="button-resposta button-ajuda parar" onclick="parar()" disabled >Parar</button>
+             
+         </div>
+            
+        </main>
+        
+        
+       </div>
+       
+       <script>
+           
+           function começar(){
+               document.querySelector('.parar').disabled = false;
+               document.querySelector('.continuar').disabled = true;
+               
+               for(i ; i < z.length; i++){
+                   z[i].disabled = false;
+               }
+               i=0;
+               
+               document.querySelector('.dica').innerHTML = "";
+               document.querySelector('.continuar').textContent = "Continuar";
+               
+               var resposta = pergunta();
+               cont += 1;
+               return resposta;
+           }
+           
+           var dinheiro = 1000;
+           var cont = 1;
+           var i = 0;
+           var z = document.querySelectorAll('.dbutton');
+           document.getElementById("suspense").volume = 0.1;
+
+       </script>
+        
+    
+    </body>
+</html>    
